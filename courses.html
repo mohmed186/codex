@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EasyCiding - Courses</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="courses.css" />
+</head>
+<body>
+  <!-- Header/Navigation -->
+  <header>
+    <div class="logo">
+      <i class="fas fa-graduation-cap"></i>
+      <span>EasyCiding</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <button class="join-btn header-join-btn">Join Now</button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <section class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+      <li><a href="#"><i class="fas fa-star"></i> Reviews</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+      <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+    </ul>
+    <a href="#" class="mobile-join-btn">Join Now</a>
+  </section>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon   = menuToggle.querySelector('i');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    // يبدّل أيقونة الهامبرغر بين ☰ و ✕
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-times');
+  });
+</script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>All Courses</h1>
+      <h2>All Online Courses</h2>
+      <p>
+        Find what fascinates you as you explore these online courses. Start
+        your learning journey today with expert instructors and
+        industry-leading content.
+      </p>
+      <button class="join-btn">Explore Courses</button>
+    </div>
+  </section>
+
+  <!-- Courses List Header -->
+  <section class="courses-header container">
+    <div class="header">
+      <h1>All Courses</h1>
+      <p>
+        Find what fascinates you as you explore these online courses. Start
+        your learning journey today with expert instructors.
+      </p>
+    </div>
+  </section>
+
+
+<!-- Courses Grid -->
+<section class="courses-grid container">
+  <!-- Example Course Card 1 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Course Card 2 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Course Card 3 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Course Card 4 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Course Card 5 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Course Card 6 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Course Card 7 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Course Card 8 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Course Card 9 -->
+  <div class="course-card">
+    <div class="card-badge">Featured</div>
+    <div class="card-img">
+      <img
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="JavaScript Course"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">JavaScript Full Mastery 2024</h3>
+      <p class="card-description">
+        Master JavaScript with our updated course. Learn core concepts, ES6+,
+        and advanced techniques to become a JS expert.
+      </p>
+      <div class="card-tags">
+        <span class="card-tag intermediate">Intermediate</span>
+      </div>
+      <div class="card-footer">
+        <div class="price">
+          <span class="original-price">$99</span>
+          <span class="discounted-price">$59</span>
+        </div>
+        <button class="enroll-btn">
+          <i class="fas fa-shopping-cart"></i> Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+
+      if (mobileMenu.classList.contains("active")) {
+        menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+      } else {
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    });
+
+    // Close menu on link click
+    document.querySelectorAll(".mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Filter buttons active state toggle
+    document.querySelectorAll(".filter-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        document
+          .querySelectorAll(".filter-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+        // TODO: Add filtering logic here
+      });
+    });
+  </script>
+
+
+    <section class="benefits-section">
+    <div class="testimonial-header">
+    <div class="badge">💜 Benefits</div>
+  
+  </div>
+  <div class="benefits-header">
+    <h2>Key Benefits of Courses</h2>
+    <p>
+      Explore the incredible advantages of enrolling in our courses and enhancing your<br>
+      skills for the ultimate career success.
+    </p>
+  </div>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" alt="Built by Professionals">
+      <h3>Built by Professionals</h3>
+      <p>Get the best experience knowing that our courses are built by professionals.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/diploma.png" alt="Completion Certificate">
+      <h3>Completion Certificate</h3>
+      <p>Receive a Completion Award from our Team to enhance your motivation.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/chat.png" alt="Chat Support">
+      <h3>Instant Chat Help</h3>
+      <p>Have questions? Reach out for a quick chat — here for you 24/7.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/infinity.png" alt="Lifetime Access">
+      <h3>Lifetime Membership</h3>
+      <p>With just one payment, you'll get permanent access to the course.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/conference-call.png" alt="Community Access">
+      <h3>Access to Community</h3>
+      <p>Join our private community to connect with like-minded learners and grow together.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/download.png" alt="Offline Access">
+      <h3>Download for Offline Use</h3>
+      <p>Our courses can be downloaded, so you can watch them anytime, anywhere.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+     <div class="container">
+        <section class="faq-section">
+            <div class="faq-header">
+                <h1>Frequently Asked Questions!</h1>
+            </div>
+            
+            <div class="contact-section">
+                <h2>Still Have Questions?</h2>
+                <p>Contact Us, We are happy to help you</p>
+                <a href="#" class="cta-button">Start Learning Now</a>
+            </div>
+            
+            <div class="faq-content">
+                <div class="faq-grid">
+                    <div class="faq-column">
+                        <h3 class="faq-title">General Questions</h3>
+                        
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                What is Course Site?
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Course Site is a premier online learning platform offering high-quality courses in various fields including web development, data science, design, and more. Our platform provides expert-led courses with practical projects to help you advance your career.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Is the community supportive?
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! Our learning community is one of our strongest assets. You'll join thousands of learners in our exclusive community where you can ask questions, share projects, get feedback, and network with peers and industry professionals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-column">
+                        <h3 class="faq-title">Course Details</h3>
+                        
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item active">
+                            <div class="faq-question">
+                                Do you have refund policy?
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our Purchases happen through Whop. Whop has its own refund policy, which you can find on their website. We recommend reviewing their policy before making a purchase.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Are there live classes or just recorded content?
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer both! While our core curriculum consists of expertly recorded video lessons that you can watch at your own pace, we also host regular live sessions including Q&A sessions with instructors, workshops, and community events.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
+
+  <section class="courses-topics">
+    <div class="container">
+      
+      <!-- التاج الصغير "Featured Topics" -->
+      <span class="label">
+        <!-- استخدمنا رمز بسيط كنقطة أيقونية؛ يمكنك استبداله بأي SVG أو أيقون أخرى -->
+        <span class="label-icon">✦</span>
+        Featured Topics
+      </span>
+
+      <!-- العنوان الرئيسي -->
+      <h2 class="title">Courses Topics</h2>
+
+      <!-- النص التوضيحي تحت العنوان -->
+      <p class="subtitle">
+        Explore the key topics covered in our courses, designed to equip you with the skills needed for real-world success.
+      </p>
+
+      <!-- قائمة المواضيع -->
+      <div class="topics-list">
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">Web Development</span>
+        </div>
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">Java Script</span>
+        </div>
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">Framer</span>
+        </div>
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">Web Design</span>
+        </div>
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">Webflow</span>
+        </div>
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">CSS</span>
+        </div>
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">UI/UX Design</span>
+        </div>
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">Angular</span>
+        </div>
+        <div class="topic-item">
+          <span class="topic-icon">✦</span>
+          <span class="topic-text">React</span>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+ <!-- Section for Hero Area -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Boost your Learning & Knowledge with CourseSite Now</h1>
+            <p>Your Path to Becoming a Web Wizard</p>
+            <a href="#" class="cta-button">Start Learning Now</a>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="nav-links">
+            <a href="#">Benefits</a>
+            <a href="#">Courses</a>
+            <a href="#">Contact</a>
+            <a href="#">Reviews</a>
+            <a href="#">Join Our News Letter</a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>CourseSite © 2025. Designed by FrameBase</p>
+        </footer>
+    </section>
+
+
+
+     
+
+</body>
+</html>
+
+

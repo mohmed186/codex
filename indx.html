@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyCoding</title>
+  <link rel="stylesheet" href="style1.css" />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+ <!-- Header -->
+<header class="header">
+<div class="logo">
+  <img src="logo.png" alt="EasyCoding Logo" class="logo-img" />
+  <span>EasyCoding</span>
+</div>
+
+
+<button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+
+
+  <nav class="nav" id="navbar">
+  <a href="courses.html">Courses</a>
+
+ <a href="rev.html" id="nav-reviews">Reviews</a>
+    <a href="#">Contact</a>
+    <a href="#">Join</a>
+  </nav>
+<button> Get Start</button>
+</header>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navbar    = document.getElementById('navbar');
+
+  hamburger.addEventListener('click', () => {
+    // 1. فعل/عطل القائمة
+    navbar.classList.toggle('active');
+
+    // 2. حسب حالة القائمة، غيّر أيقونة الزر
+    if (navbar.classList.contains('active')) {
+      hamburger.textContent = '✕';  // عرض علامة الإغلاق
+    } else {
+      hamburger.textContent = '☰';  // رجوع للهمبرغر
+    }
+  });
+</script>
+
+<!-- Hero Section -->
+<section class="hero">
+   <video class="hero-video" autoplay muted loop playsinline>
+    <source src="video_preview_h264 (1).mp4" type="video/mp4">
+    <!-- يمكنك إضافة صيغ أخرى مثل WebM -->
+    Your browser does not support the video tag.
+  </video>
+ <!-- Background bubbles -->
+<div class="bubbles">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+  <!-- Content -->
+  <div class="hero-content" data-aos="fade-up">
+    <div class="badge">🔘 Trusted by 20,000+ Happy Learners</div>
+    <h1>Your Path to Mastery Starts Here ,Build Real-World Skills, One Project at a Time
+      <br>Web Dev & Design made<br><span>Simple, Better.</span></h1>
+    <p>
+      Practical project-based courses that are easy to understand, straight to the point, and distractions while ensuring comprehensive learning.
+    </p>
+    <div class="hero-buttons">
+      <a href="#" class="btn secondary">View All Courses</a>
+      <a href="#" class="btn primary">Start Learning Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- AOS Animation Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+<script>
+  // عناصر الهامبرغر والقائمة
+  const hamburger = document.getElementById('hamburger');
+  const navbar    = document.getElementById('navbar');
+
+  // عند الضغط على الهامبرغر: بدِّل الكلاس active
+  hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+
+  // إخفاء القائمة بعد اختيار رابط (UX أحلى)
+  navbar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbar.classList.contains('active')) {
+        navbar.classList.remove('active');
+      }
+    });
+  });
+
+  // زرّ Get Start: يحوّلك لصفحة الكورسات
+  document.getElementById('get-start-btn').addEventListener('click', () => {
+    window.location.href = 'courses.html';
+  });
+</script>
+
+
+
+  <script src="script.js"></script>
+
+  <section class="skills-section">
+  <div class="section-header">
+    <div class="badge">🚀 We Offer</div>
+    <h2>Boost Your Skills</h2>
+    <p>
+      From critical skills to technical topics, we support your professional development<br>
+      with courses that help you grow and succeed.
+    </p>
+  </div>
+
+  <div class="skills-cards">
+    <div class="skill-card">
+      <img src="https://img.icons8.com/fluency/96/planner.png" alt="Content Icon" />
+      <h3>100+</h3>
+      <p>HOURS OF CONTENT</p>
+    </div>
+    <div class="skill-card">
+      <img src="https://img.icons8.com/fluency/96/email-open.png" alt="Courses Icon" />
+      <h3>15+</h3>
+      <p>COURSES</p>
+    </div>
+    <div class="skill-card">
+      <img src="https://img.icons8.com/fluency/96/user-group-man-man.png" alt="Students Icon" />
+      <h3>20k+</h3>
+      <p>STUDENTS</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="courses-section">
+  <div class="section-header">
+    <div class="badge">🎓 Our Courses</div>
+    <h2>Featured Courses</h2>
+    <p>
+      From critical skills to technical topics, we support your professional development<br>
+      with courses that help you grow and succeed.
+    </p>
+  </div>
+
+  <div class="course-cards">
+    <!-- Course 1 -->
+    <div class="course-card">
+      <img src="9DgGuChlqYjMNT5bypTzBl1VY.avif" alt="JavaScript Course" />
+      <div class="card-body">
+        <div class="course-top">
+          <div class="stars">★★★★★</div>
+          <div class="price">$99</div>
+        </div>
+        <h3>JavaScript Full Mastery 2024 Edition</h3>
+        <p>Master JavaScript with our updated course. Learn core concepts, ES6+, and advanced techniques to become a pro.</p>
+        <div class="labels">
+          <span class="tag">Featured</span>
+          <span class="level">📊 Intermediate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course 2 -->
+    <div class="course-card">
+      <img src="O2w4BtVhZ8367dQqNnj4FOufA.avif" alt="Framer Course" />
+      <div class="card-body">
+        <div class="course-top">
+          <div class="stars">★★★★★</div>
+          <div class="price">$99</div>
+        </div>
+        <h3>Framer Full Mastery & More 2024</h3>
+        <p>Master Framer in 2024 with this updated course. Learn to design, prototype, and build interactive UI.</p>
+        <div class="labels">
+          <span class="tag">Featured</span>
+          <span class="level">🧑‍🎓 Beginner</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course 3 -->
+    <div class="course-card">
+      <img src="fDham0xmnMte0ldfxVqHyjIpe4Q.avif" alt="Figma Course" />
+      <div class="card-body">
+        <div class="course-top">
+          <div class="stars">★★★★★</div>
+          <div class="price">$79</div>
+        </div>
+        <h3>Figma Full Mastery 2024 Edition</h3>
+        <p>Master Figma in 2024 with this updated course. Learn to design, prototype, and collaborate on creative projects.</p>
+        <div class="labels">
+          <span class="tag">Featured</span>
+          <span class="level">👶 Beginner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="testimonials-section">
+  <div class="testimonial-header">
+    <div class="badge">💜 Testimonials</div>
+    <h2>Our Students feedback</h2>
+    <p>
+      Explore the incredible advantages of enrolling in our<br>
+      courses and enhancing your skills.
+    </p>
+    <a href="#" class="btn-black">Start Learning Now</a>
+  </div>
+
+  <div class="testimonial-cards">
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>''The courses are top-notch, providing in-depth knowledge that's easy to apply. Each lesson is structured to ensure you fully grasp the material.''</p>
+      <div class="author">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Brendan" />
+        <div>
+          <strong>Brendan Wilson</strong>
+          <span>Aspiring Web Designer</span>
+        </div>
+      </div>
+      <div class="icon">in</div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"The courses are excellent, delivering practical insights with ease. Each module is designed to help you fully understand and apply the knowledge."</p>
+      <div class="author">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Rock Lee" />
+        <div>
+          <strong>Rock Lee</strong>
+          <span>Web Designer</span>
+        </div>
+      </div>
+      <div class="icon">in</div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"These courses are exceptional, offering detailed content that's easy to implement. Every lesson is carefully crafted to deepen your understanding."</p>
+      <div class="author">
+        <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Sakura" />
+        <div>
+          <strong>Sakura</strong>
+          <span>Web Developer</span>
+        </div>
+      </div>
+      <div class="icon">in</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="benefits-section">
+    <div class="testimonial-header">
+    <div class="badge">💜 Benefits</div>
+  
+  </div>
+  <div class="benefits-header">
+    <h2>Key Benefits of Courses</h2>
+    <p>
+      Explore the incredible advantages of enrolling in our courses and enhancing your<br>
+      skills for the ultimate career success.
+    </p>
+  </div>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" alt="Built by Professionals">
+      <h3>Built by Professionals</h3>
+      <p>Get the best experience knowing that our courses are built by professionals.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/diploma.png" alt="Completion Certificate">
+      <h3>Completion Certificate</h3>
+      <p>Receive a Completion Award from our Team to enhance your motivation.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/chat.png" alt="Chat Support">
+      <h3>Instant Chat Help</h3>
+      <p>Have questions? Reach out for a quick chat — here for you 24/7.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/infinity.png" alt="Lifetime Access">
+      <h3>Lifetime Membership</h3>
+      <p>With just one payment, you'll get permanent access to the course.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/conference-call.png" alt="Community Access">
+      <h3>Access to Community</h3>
+      <p>Join our private community to connect with like-minded learners and grow together.</p>
+    </div>
+
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/download.png" alt="Offline Access">
+      <h3>Download for Offline Use</h3>
+      <p>Our courses can be downloaded, so you can watch them anytime, anywhere.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="pricing-section">
+  <div class="pricing-header">
+    <h2>Join Our Premium Courses</h2>
+    <div class="trust-badge">
+      <p>Trusted by 70k+ students</p>
+      <span>⭐⭐⭐⭐⭐</span>
+      <strong>4.8/5</strong>
+      <span>• 5,467 Reviews</span>
+    </div>
+  </div>
+
+  <div class="pricing-cards">
+    <!-- Starter Plan -->
+    <div class="pricing-card">
+      <h3>Starter plan</h3>
+      <div class="price-box">
+        <span class="price">$50.90</span><span class="per">/mo</span>
+        <small>Billed annually</small>
+      </div>
+      <ul class="features">
+        <li>✔ Limited Access to the platform</li>
+        <li>✔ 10 Free Courses</li>
+        <li>✔ Limited Benefits</li>
+        <li class="inactive">✘ Agent</li>
+        <li class="inactive">✘ Live Chat Support</li>
+      </ul>
+      <a href="#" class="btn-outline">Get Started</a>
+    </div>
+
+    <!-- Pro Plan (Popular) -->
+    <div class="pricing-card popular">
+      <div class="label">Popular Plan</div>
+      <h3>Pro plan</h3>
+      <div class="price-box">
+        <span class="price">$70.90</span><span class="per">/mo</span>
+        <small>Billed annually</small>
+      </div>
+      <ul class="features">
+        <li>✔ Full Access to the platform</li>
+        <li>✔ 20 Free Courses</li>
+        <li>✔ Unlimited Benefits</li>
+        <li>✔ Agent</li>
+        <li class="inactive">✘ Live Chat Support</li>
+      </ul>
+      <a href="#" class="btn-solid">Get Started</a>
+    </div>
+
+    <!-- Business Plan -->
+    <div class="pricing-card">
+      <h3>Business plan</h3>
+      <div class="price-box">
+        <span class="price">$99.90</span><span class="per">/mo</span>
+        <small>Billed annually</small>
+      </div>
+      <ul class="features">
+        <li>✔ Full Access to the platform</li>
+        <li>✔ 30 Free Courses</li>
+        <li>✔ Unlimited Benefits</li>
+        <li>✔ Agent</li>
+        <li>✔ Live Chat Support</li>
+      </ul>
+      <a href="#" class="btn-outline">Get Started</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="why-section">
+   <div class="testimonial-header">
+    <div class="badge">💜 About Me</div>
+  
+  </div>
+  <div class="why-header">
+    <h2>But Why CourseSite ?</h2>
+    <p>
+      Explore the incredible advantages of enrolling in our courses and enhancing your<br>
+      skills for the ultimate career success.
+    </p>
+  </div>
+
+  <div class="why-grid">
+    <!-- Left Cards -->
+    <div class="why-column">
+      <div class="why-card">
+        <img src="https://img.icons8.com/ios-filled/40/diploma.png" />
+        <div>
+          <h3>Certificate of Completion</h3>
+          <p>Receive a recognized credential that significantly boosts your resume.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <img src="https://img.icons8.com/ios-filled/40/network.png" />
+        <div>
+          <h3>Networking Opportunities</h3>
+          <p>Connect with peers and valuable industry professionals for growth.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Image + Bio -->
+    <div class="why-center">
+      <div class="why-image">
+        <img src="https://images.pexels.com/photos/3777946/pexels-photo-3777946.jpeg" alt="Instructor">
+      </div>
+      <div class="why-bio">
+        <p><strong>I started my journey:</strong><br>
+        In web design and development in 2010 at the age of 24. I transitioned into a full-time instructor and mentor in 2018.</p>
+        <p><strong>Through hands-on:</strong><br>
+        project-based courses, I simplify challenging topics and make them accessible to everyone.</p>
+      </div>
+    </div>
+
+    <!-- Right Cards -->
+    <div class="why-column">
+      <div class="why-card">
+        <img src="https://img.icons8.com/ios-filled/40/book-shelf.png" />
+        <div>
+          <h3>Comprehensive Curriculum</h3>
+          <p>Master essential topics and practical skills effectively and thoroughly.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <img src="https://img.icons8.com/ios-filled/40/training.png" />
+        <div>
+          <h3>Expert Guidance</h3>
+          <p>Learn from experienced instructors for personalized and effective support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <section class="faq-section container">
+    <div class="faq-left">
+      <div class="faq-card">
+        <span class="faq-tag">Faq Hub</span>
+        <h1>Frequently Asked Questions!</h1>
+        <div class="still-have-questions">
+          <h2>Still Have Questions?</h2>
+          <p><a href="#">Contact Us</a>, We are happy to help you</p>
+          <div class="avatars">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User 1" />
+            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="User 2" />
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 3" />
+          </div>
+          <button class="btn-start">Start Learning Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="faq-right">
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false">What is Course Site?<span class="icon">+</span></button>
+        <div class="accordion-panel">This is a platform to learn programming languages effectively.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false">Do you have refund policy?<span class="icon">+</span></button>
+        <div class="accordion-panel">
+          Our Purchases happen through Whop. Whop has its own refund policy, which you can find on their website. We recommend reviewing their policy before making a purchase.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false">Is the community supportive?<span class="icon">+</span></button>
+        <div class="accordion-panel">Yes, our community is very supportive and active.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false">Are there live classes or just recorded content?<span class="icon">+</span></button>
+        <div class="accordion-panel">We offer both live classes and recorded content for your convenience.</div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const accordions = document.querySelectorAll('.accordion-btn');
+    accordions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        const panel = btn.nextElementSibling;
+
+        if (!expanded) {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          btn.querySelector('.icon').textContent = "−";
+        } else {
+          panel.style.maxHeight = null;
+          btn.querySelector('.icon').textContent = "+";
+        }
+      });
+    });
+  </script>
+
+
+<section>
+  <div class="courses-container">
+    <div class="courses-header">
+        <span class="featured-icon">⭐</span>
+        <h2>Courses Topics</h2>
+    </div>
+    <p class="courses-description">Explore the key topics covered in our courses, designed to equip you with the skills needed for real-world success.</p>
+
+    <div class="courses-tags">
+        <div class="tag">Web Development</div>
+        <div class="tag">Java Script</div>
+        <div class="tag">Framer</div>
+        <div class="tag">Web Design</div>
+        <div class="tag">Webflow</div>
+        <div class="tag">CSS</div>
+        <div class="tag">UI/UX Design</div>
+        <div class="tag">Angular</div>
+        <div class="tag">React</div>
+    </div>
+</div>
+</section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="responsive-footer">
+        <div class="footer-container">
+            <!-- Logo and Social Media -->
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span>CodingLab</span>
+                </div>
+                <div class="social-media">
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Get started</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">App design</a></li>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Logo design</a></li>
+                        <li><a href="#">Banner design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">My account</a></li>
+                        <li><a href="#">Preferences</a></li>
+                        <li><a href="#">Purchase</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="#">HTML & CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Photoshop</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section subscribe-section">
+                    <h3>Subscribe</h3>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>Copyright © 2021 CodingLab. All rights reserved</p>
+                </div>
+               
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    
+</body>
+</html>
+
+

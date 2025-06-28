@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="contact.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVoHDi6U6VSfUe+gKk2QEe35YdI3szIl5k+sV/IBpKCsZb7ZhV5yn6imtjZPkbf1m8VgZ5Y+XGwpE6smUwX6DQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <!-- Logo on the left -->
+  
+
+      <!-- hidden checkbox for toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <!-- hamburger icon -->
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <!-- menu items centered -->
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    
+  </nav>
+  
+
+  <script src="script.js"></script>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb container">
+    <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+    <span>&gt;</span>
+    <span>Contact Us</span>
+  </nav>
+
+ <section class="hero container">
+    <h1>Get in touch with us today!</h1>
+    <p>Whatever you need, whenever you need it, our team is here to help—dedicated to supporting you every step of the way.</p>
+  </section>
+
+  <!-- Main contact section -->
+  <section class="contact-container container">
+
+    <!-- left column: info cards -->
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="icon-box"><i class="fa-solid fa-comments"></i></div>
+        <h3>Message Us</h3>
+        <p>Use our online chat system to message us and get support.</p>
+        <a href="mailto:coursesite@support.com">coursesite@support.com</a>
+      </div>
+      <div class="info-card">
+        <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+        <h3>Call Us</h3>
+        <p>Let's chat—nothing better than talking to another human being.</p>
+        <a href="tel:+1234567890">+1234567890</a>
+      </div>
+    </div>
+
+    <!-- right column: form -->
+    <div class="form-card">
+      <form id="contactForm" novalidate>
+        <div class="grid-2">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <textarea name="message" rows="6" placeholder="How can we help?" required></textarea>
+        <label class="checkbox-label">
+          <input type="checkbox" name="subscribe" /> Subscribe to Newsletter
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </section>
+
+ <div class="faq-container">
+    <!-- Header -->
+    <div class="faq-header">
+      <h1>Frequently Asked Questions!</h1>
+      <p>Have questions? We're here to help!</p>
+    </div>
+
+    <!-- Questions and Answers Section -->
+    <div class="faq-questions">
+      <!-- Question 1 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          What is Course Site? <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Course Site is a platform for learning programming, offering multiple courses for learners worldwide.</p>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you have a refund policy? <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Our Purchases happen through Whop. Whop has its own refund policy, which you can find on their website. We recommend reviewing their policy before making a purchase.</p>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Is the community supportive? <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, the community is very supportive, with active discussions, group support, and expert advice available.</p>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Are there live classes or just recorded content? <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We offer both live classes and recorded content to ensure flexibility in learning.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <p>Still have questions? <a href="contact.html">Contact Us</a>, we are happy to help you!</p>
+      <button class="start-learning">Start Learning Now</button>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
